@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #000;
+  font-family: 'Press Start 2P', monospace;
+  padding: 40px 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wrap {
+  width: 100%;
+  max-width: 800px;
+  border: 6px solid #006EE9;
+  box-shadow: 0 0 0 4px #000, 0 0 0 8px #006EE9, 0 0 40px #006EE9;
+  padding: 40px 32px 48px;
+}
+
+#course {
+  text-align: center;
+  font-size: 7px;
+  color: #006EE9;
+  letter-spacing: 0.2em;
+  margin-bottom: 12px;
+  opacity: 0.7;
+}
+
+#title {
+  text-align: center;
+  font-size: 28px;
+  color: #FFD600;
+  text-shadow: 4px 4px 0 #FF6B00, -2px -2px 0 #FF3B5C;
+  margin-bottom: 36px;
+}
+
+ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+li {
+  border: 3px solid var(--c);
+  box-shadow: 3px 3px 0 var(--c);
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+li:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 0 0 20px var(--c), 6px 6px 0 var(--c);
+}
+
+.top {
+  height: 90px;
+  background: var(--c);
+  position: relative;
+}
+
+.top::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.15) 2px,
+    rgba(0,0,0,0.15) 4px
+  );
+}
+
+.name {
+  font-size: 5px;
+  color: #fff;
+  padding: 8px 6px 4px;
+  line-height: 1.6;
+  background: #000;
+  border-top: 2px solid var(--c);
+}
+
+.hex {
+  background: #000;
+  padding: 0 6px 8px;
+}
+
+.hex span {
+  font-size: 5px;
+  color: var(--c);
+  text-shadow: 0 0 6px var(--c);
+}
